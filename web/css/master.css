@@ -1,0 +1,130 @@
+:root, html, body, *, *::before, *::after{
+  margin:0;padding:0;
+  box-sizing:border-box;
+  outline:none;
+  text-decoration:none;
+  user-select:none;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Mobile link click effect disabling */
+}
+
+
+body{
+  height:100vh;
+  background-color:#1f2125;
+
+  display:grid;
+  grid-auto-rows:1fr 2fr;
+
+}
+
+body > main{
+  background-color:#2d3134;
+  box-shadow:0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+  display:grid;
+  grid-auto-rows:2fr 3fr 1fr;
+
+  position:static;
+  z-index:1;
+}
+
+body > main > header{
+  color:lightgrey;
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+}
+body > main > header > menu{
+  background-color:lightgrey;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+}
+body > main > header > menu::before,
+body > main > header > menu::after{
+  content:'';
+
+  background-color:lightgrey;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+
+  position:absolute;
+  z-index:2;
+}
+body > main > header > menu::before{
+  margin-top:-9px;
+}
+body > main > header > menu::after{
+  margin-top:9px;
+}
+
+body > main > input{
+  background-color:transparent;
+  padding:0px 50px;
+  color:white;
+  caret-color:#314e7a;
+  font-size:80px;
+  font-family:monospace;
+  /* direction:rtl; */
+  text-align:right;
+  border:none;
+}
+body > main > footer{
+  display:grid;
+  place-items:center;
+}
+body > main > footer > div{
+  background-color:white;
+  width:5%;
+  height:7px;
+  border-radius:5px;
+}
+
+
+
+
+body > nav{
+  background-color:transparent;
+  color:white;
+  height:100%;
+  width:100%;
+
+  display:grid;
+  grid-template-columns:auto auto auto;
+}
+
+
+body > nav > *{
+  display:grid;
+  place-items:center;
+  height:100%;
+  width:100%;
+}
+
+body > nav > section{
+  background-color:#314e7a;
+}
+
+body > nav > main{
+  border-left:2px solid #2d3134;
+}
+
+/* BUTTONS */
+body > nav > * > *{
+  background-color:transparent;
+  color:white;
+  font-size:25px;
+  border:none;
+}
+
+body > nav > main > *{
+  color:#314e7a;
+}
+
+body > nav > aside,
+body > nav > section{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+}
