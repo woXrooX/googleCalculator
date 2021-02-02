@@ -1,3 +1,3 @@
 # CSS Training
 
-Google Calculator v1.0
+Google Calculator v1
